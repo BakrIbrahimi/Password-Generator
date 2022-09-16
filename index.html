@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="liveAlertPlaceholder" class="container">
+      <!-- box password -->
+      <div id="box" class="shadow">
+        <span id="pass">P4$5W0rD!</span>
+        <i
+          id="copy"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+          class="fa-regular fa-copy fa-flip"
+          style="--fa-animation-duration: 3s"
+        ></i>
+      </div>
+      <!-- Main -->
+      <div class="main shadow">
+        <div class="custom-range">
+          <div class="d-flex justify-content-between">
+            <label class="form-label" for="range">Character Length</label>
+            <span id="slidernum">0</span>
+          </div>
+          <input
+            data-js-selector="slider"
+            class="slider mt-2"
+            min="0"
+            max="20"
+            type="range"
+            id="range"
+            value="0"
+          />
+        </div>
+        <div class="my-4">
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="uppercase" />
+            <label class="form-check-label" for="uppercase"
+              >Include Uppercase Letters</label
+            >
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="lower" />
+            <label class="form-check-label" for="lower"
+              >Include Lowercase Letters</label
+            >
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="num" />
+            <label class="form-check-label" for="num">Include Numbers</label>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="symbols" />
+            <label class="form-check-label" for="symbols"
+              >Include Symbols</label
+            >
+          </div>
+        </div>
+        <button id="gbtn">
+          GENERATE <i class="ms-2 fa-solid fa-arrow-right fa-beat"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div id="mymodal" class="modal-body"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

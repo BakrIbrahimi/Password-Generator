@@ -1,0 +1,99 @@
+:root {
+  --backGround: #343a40;
+  --second: #212529;
+  --main: #0d6efd;
+}
+body {
+  background-color: var(--backGround) !important;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  color: #f8f9fa !important;
+  font-weight: bold !important;
+  font-family: "Lilita One", cursive !important;
+}
+#box {
+  background-color: var(--second);
+  padding: 20px;
+  font-size: 25px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.fa-copy {
+  color: var(--main);
+  cursor: pointer;
+}
+.main {
+  background-color: var(--second);
+  padding: 20px;
+}
+.slider {
+  width: 100%;
+  border-radius: unset !important;
+}
+
+#slidernum {
+  color: var(--main);
+  font-size: 20px;
+}
+
+.form-check-input {
+  border-radius: unset !important;
+}
+
+#gbtn {
+  padding: 10px 0;
+  width: 100%;
+  background-color: var(--main);
+  border: unset;
+  font-weight: bold;
+  border: 2px solid var(--main);
+  transition: 0.3s ease-in-out;
+  color: #f8f9fa;
+}
+#gbtn:hover {
+  background-color: unset;
+  color: var(--main);
+}
+
+.modal-content {
+  background-color: unset !important;
+
+  border: unset !important;
+  border-radius: unset !important;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px !important;
+  }
+  #box {
+    font-size: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    padding: 0 250px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 350px !important;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    padding: 0 450px !important;
+  }
+}
+
+.fa-circle-xmark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  padding: 0.6rem;
+}
